@@ -33,10 +33,10 @@ Dữ liệu bài toán FER2013 lấy từ một cuộc thi trên Kaggle[1] bao g
 
 Dữ liệu sau khi tải về giải nén ta theo cấu trúc cây đề cập trong báo cáo.
 ## Mô hình kế thừa
-Cài đặt lại mô hình trong sách và thực hiện 4 thực nghiệm chính. Chi tiết thể hiện ở thư mục [Emotion_Recognition_Keras](https://).
+Cài đặt lại mô hình trong sách và thực hiện 4 thực nghiệm chính. Chi tiết thể hiện ở thư mục [Emotion_Recognition_Keras](https://github.com/stark4079/Emotion_Recognition/tree/main/Emotion_Recognition_Keras).
 
 ## Mô hình đề xuất
-Đưa ra mô hình đề xuất và kết quả thực nghiệm cho thấy sự cải thiện về độ chính xác và thời gian huấn luyện. Chi tiết thể hiện ở thư mục [Emotion_Recognition_Pytorch](https://).
+Đưa ra mô hình đề xuất và kết quả thực nghiệm cho thấy sự cải thiện về độ chính xác và thời gian huấn luyện. Chi tiết thể hiện ở thư mục [Emotion_Recognition_Pytorch](https://github.com/stark4079/Emotion_Recognition/tree/main/Emotion_Recognition_Pytorch).
 
 
 ## Tài liệu tham khảo
