@@ -38,8 +38,9 @@ CUDA_VISIBLE_DEVICES=1 python train_recognizer.py --checkpoints checkpoints/exp1
 CUDA_VISIBLE_DEVICES=1 python train_recognizer.py --checkpoints checkpoints/exp1 -opt "SGD" -lr 1e-4 --start 40 --model checkpoints/exp1/epoch_40.hdf5
 ```
 
-![Quá trình hội tụ hàm lỗi](https://github.com/https://github.com/stark4079/Emotion_Recognition/fer2013/output/exp1/exp1_loss.png?raw=true)
-![Quá trình hội tụ độ chính xác](https://github.com/https://github.com/stark4079/Emotion_Recognition/fer2013/output/exp1/exp1_acc.png?raw=true)
+![Quá trình hội tụ hàm lỗi](https://github.com/https://github.com/stark4079/Emotion_Recognition/blob/main/Emotion_Recognition_Keras/fer2013/output/exp1/exp1_loss.png?raw=true)
+
+![Quá trình hội tụ độ chính xác](https://github.com/https://github.com/stark4079/Emotion_Recognition/blob/main/Emotion_Recognition_Keras/fer2013/output/exp1/exp1_acc.png?raw=true)
 
 2. Thực nghiệm 2
 ```bash
@@ -47,8 +48,10 @@ CUDA_VISIBLE_DEVICES=1 python train_recognizer.py --checkpoints checkpoints/exp2
 
 CUDA_VISIBLE_DEVICES=1 python train_recognizer.py --checkpoints checkpoints/exp2 -lr 1e-4 --epoch 15 --start 30 --model checkpoints/exp2/epoch_30.hdf5
 ```
-![Quá trình hội tụ hàm lỗi](https://github.com/https://github.com/stark4079/Emotion_Recognition/fer2013/output/exp1/exp2_loss.png?raw=true)
-![Quá trình hội tụ độ chính xác](https://github.com/https://github.com/stark4079/Emotion_Recognition/fer2013/output/exp2/exp2_acc.png?raw=true)
+![Quá trình hội tụ hàm lỗi](https://github.com/https://github.com/stark4079/Emotion_Recognition/blob/main/Emotion_Recognition_Keras/fer2013/output/exp2/exp2_loss.png?raw=true)
+
+![Quá trình hội tụ độ chính xác](https://github.com/https://github.com/stark4079/Emotion_Recognition/blob/main/Emotion_Recognition_Keras/fer2013/output/exp2/exp2_acc.png?raw=true)
+
 3. Thực nghiệm 3
 ```bash
 CUDA_VISIBLE_DEVICES=1 python train_recognizer.py --checkpoints checkpoints/exp3 -lr 1e-3 --epoch 40
@@ -57,8 +60,9 @@ CUDA_VISIBLE_DEVICES=1 python train_recognizer.py --checkpoints checkpoints/exp3
 
 CUDA_VISIBLE_DEVICES=1 python train_recognizer.py --checkpoints checkpoints/exp3 -lr 1e-5 --epoch 15 --start 60 --model checkpoints/exp3/epoch_60.hdf5
 ```
-![Quá trình hội tụ hàm lỗi](https://github.com/https://github.com/stark4079/Emotion_Recognition/fer2013/output/exp3/exp3_loss.png?raw=true)
-![Quá trình hội tụ độ chính xác](https://github.com/https://github.com/stark4079/Emotion_Recognition/fer2013/output/exp3/exp3_acc.png?raw=true)
+![Quá trình hội tụ hàm lỗi](https://github.com/https://github.com/stark4079/Emotion_Recognition/blob/main/Emotion_Recognition_Keras/fer2013/output/exp3/exp3_loss.png?raw=true)
+
+![Quá trình hội tụ độ chính xác](https://github.com/https://github.com/stark4079/Emotion_Recognition/blob/main/Emotion_Recognition_Keras/fer2013/output/exp3/exp3_acc.png?raw=true)
 
 4. Thực nghiệm 4
 Xây dựng lại dữ liệu đầu vào và tiến hành thực nghiệm.
@@ -71,8 +75,9 @@ CUDA_VISIBLE_DEVICES=1 python train_recognizer.py --checkpoints checkpoints/exp4
 
 CUDA_VISIBLE_DEVICES=1python train_recognizer.py --checkpoints checkpoints/exp4 -lr 1e-5 --epoch 15 --start 60 --model checkpoints/exp4/epoch_60.hdf5
 ```
-![Quá trình hội tụ hàm lỗi](https://github.com/https://github.com/stark4079/Emotion_Recognition/fer2013/output/exp4/exp4_loss.png?raw=true)
-![Quá trình hội tụ độ chính xác](https://github.com/https://github.com/stark4079/Emotion_Recognition/fer2013/output/exp4/exp4_acc.png?raw=true)
+![Quá trình hội tụ hàm lỗi](https://github.com/https://github.com/stark4079/Emotion_Recognition/blob/main/Emotion_Recognition_Keras/fer2013/output/exp4/exp4_loss.png?raw=true)
+
+![Quá trình hội tụ độ chính xác](https://github.com/https://github.com/stark4079/Emotion_Recognition/blob/main/Emotion_Recognition_Keras/fer2013/output/exp4/exp4_acc.png?raw=true)
 
 ## Đánh giá mô hình
 Để đánh giá mô hình, ta chạy câu lệnh bên dưới để đọc mô hình đã huấn luyện tốt nhất.
