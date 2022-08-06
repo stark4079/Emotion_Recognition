@@ -115,3 +115,4 @@ URL: https://www.kaggle.com/c/challenges- in- representationlearning-facial-expr
 |    Trần Xuân Lộc   |       18127131      | 18127131@student.hcmus.edu.vn |
 |    Trần Đại Chí    |       18127070      | 18127070@student.hcmus.edu.vn |
 | Võ Trần Quang Tuấn |       18127248      | 18127248@student.hcmus.edu.vn |
+
