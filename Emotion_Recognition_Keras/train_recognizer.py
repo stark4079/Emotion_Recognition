@@ -8,7 +8,7 @@
 import matplotlib
 matplotlib.use("Agg")
 from keras.preprocessing.image import ImageDataGenerator
-from keras.optimizers import Adam
+from keras.optimizers import Adam, SGD
 from keras.models import load_model
 import keras.backend as K
 import argparse
@@ -37,6 +37,12 @@ ap.add_argument("-m", "--model", type=str,
         help="path to *specific* model checkpoint to load")
 ap.add_argument("-s", "--start-epoch", type=int, default=0,
         help="epoch to restart training at")
+ap.add_argument("-lr", "--learning-rate", type=float, default=1e-2,
+        help="learning rate")
+ap.add_argument("-opt", "--optimizer", type=str, default="Adam",
+        help="optimizer of model")
+ap.add_argument("-e", "--epoch", type=int, default=20,
+        help="number of epochs")
 args = vars(ap.parse_args())
 
 
@@ -70,7 +76,9 @@ if args["model"] is None:
     print("[INFO] compiling model...")
     model = EmotionVGGNet.build(width=48, height=48, depth=1,
             classes=config.NUM_CLASSES)
-    opt = Adam(learning_rate=1e-3)
+    opt = Adam(learning_rate=args["learning_rate"])
+    if args["optimizer"] =="SGD":
+        opt = SGD(learning_rate=args["learning_rate"] ,momentum=0.9, nesterov=True)
     model.compile(loss="categorical_crossentropy", optimizer=opt,
             metrics=["accuracy"])
 # otherwise, load the checkpoint from disk
@@ -79,7 +87,7 @@ else:
     model = load_model(args["model"])
     # update the learning rate
     print("[INFO] old learning rate: {}".format(K.get_value(model.optimizer.lr)))
-    K.set_value(model.optimizer.lr, 1e-3)
+    K.set_value(model.optimizer.lr, args["learning_rate"])
     print("[INFO] new learning rate: {}".format(K.get_value(model.optimizer.lr)))
 
 
@@ -106,7 +114,7 @@ model.fit(trainGen.generator(),
         steps_per_epoch=trainGen.numImages // config.BATCH_SIZE,
         validation_data=valGen.generator(),
         validation_steps=valGen.numImages // config.BATCH_SIZE,
-        epochs=25,
+        epochs=args["epoch"],
         max_queue_size=config.BATCH_SIZE * 2,
         callbacks=callbacks, verbose=1)
 
